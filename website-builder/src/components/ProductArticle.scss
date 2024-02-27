@@ -1,0 +1,215 @@
+.product_item {
+    position: relative;
+    margin-top: 42px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+  
+    .product_item_img_box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+  
+      p {
+        padding: 0;
+        margin: 0;
+      }
+      
+      span {
+        font-size: 13px;
+        color: #626E79;
+      }
+    }
+  
+    .product_item_details {
+      display: grid;
+      color: #4B5665;
+  
+      .product_details_indented {
+        padding-left: 20px;
+      }
+  
+      button {
+        width: 120px;
+        display: flex;
+        color: var(--primary-blue);
+        font-size: 16px;
+        background: transparent;
+        border: none;
+        border-radius: none;
+        cursor: pointer;
+  
+        .pdt_dtl_btn {
+          font-size: 24px;
+        }
+      }
+  
+      button:hover {
+        color: var(--hover-blue);
+      }
+    }
+  
+    .product_item_rating {
+      display: grid;
+      grid-template-rows: auto auto;
+      justify-items: center;
+  
+      div {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        background: #F3F9FF;
+        height: 118px;
+        width: 135px;
+        border-radius: 0 0 12px 12px;
+        color: #074786;
+  
+        .product_rating {
+          font-size: 32px;
+        }
+  
+        .product_review {
+          font-size: 14px;
+        }
+  
+        .product_rating_stars {
+          font-size: 11px;
+          color: #FFB80F;
+        }
+      }
+  
+      .product_rating_btn {
+        width: 232px;
+        height: 48px;
+        background: var(--primary-blue);
+        border: none;
+        border-radius: 12px;
+        color: #FFFFFF;
+        font-size: 16px;
+        cursor: pointer;
+      }
+  
+      .product_rating_btn:hover{
+        background-color: var(--hover-blue); 
+        transform: scale(1.1);
+      }
+    }
+  
+    // for floating number and label
+    .product_item_label {
+      position: absolute;
+      left: -6px;
+      top: -15px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      height: 34px;
+      width: 136px;
+      background: #FF7724;
+      color: #ffffff;
+      font-size: 16px;
+      border-radius: 0 8px 8px 0 ;
+    }
+  
+   
+  .product_item_label::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent 50%, #fff 50%);
+    transition: left 0.5s ease;
+    z-index: 1;
+  }
+
+  .product_item_label::after {
+    left: 100%;
+  }
+
+  .product_item_label::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, transparent 50%, #fff 50%);
+    transition: right 0.5s ease;
+    z-index: 1;
+  }
+
+  .product_item_label:hover::before {
+    right: 100%;
+  }
+    
+  
+    .product_item_number {
+      position: absolute;
+      left: -20px;
+      top: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 44px;
+      width: 44px;
+      background:#FFFFFF;
+      border: solid #E1E4E6 1px;
+      border-radius: 24px;
+      font-size: 20px;
+      color: #626E79;
+    }
+
+    // style for 4th product
+    .product_dtl_sub_first {
+        background: #FFF4ED;
+        padding: 10px;
+        border-radius: 12px;
+        display: grid;
+        gap: 14px;
+
+        .product_dtl_sub_rat {
+            font-size: 16px;
+            color: var(--primary-blue);
+            background: #FFFFFF;
+            padding: 4PX 8px 4px 8px;
+            margin-right: 8px;
+            border-radius: 4px;
+        }
+
+        .product_dtl_sub_quote {
+            font-size: 15px;
+            color: #4B5665;
+        }
+    }
+
+    .product_dtl_sub_second {
+        margin-bottom: 12px;
+        .product_dtl_sub_second_hd {
+            font-size: 16px;
+            color: #2C384A;
+            margin: 0 0 8px 0;
+        }
+
+        div {
+            display: flex;
+            gap: 8px;
+            margin-top: 6px;
+            .product_dtl_checkbox {
+                font-size: 10px;
+                color: #0855A1;
+                background: #EBF5FF;
+                padding: 6px;
+                border-radius: 24px;
+            }
+
+            span {
+                font-size: 15px;
+            }
+        }
+    }
+  }
